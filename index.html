@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Accessibility</title>
+</head>
+<body>
+    <!-- Mark up different regions of web pages and applications, 
+         so that they can be identified by web browsers and assistive technologies. 
+         For example in this code header, main, footer, form -->
+    
+    <!--Most websites have a region at the top of every page that contains site-wide information. 
+        HTML5 provides the <header> element, which can be used to define such a region.-->
+    <header>
+        <img src="#" alt="ICEAI Capital Logo">
+        <!--The HTML5 <nav> element can be used to identify a navigation menu. -->
+        <nav aria-label="Primary Navigation">
+            <!--Semantic markup conveys the menu structure to users.-->
+            <ul role="menubar" aria-label="Primary Navigation">
+                <li role="none"><a role="menuitem" href="#">Home</a></li>
+                <li role="none"><a role="menuitem" href="#">AI</a></li>
+                <li role="none"><a role="menuitem" href="#">Portfolios</a></li>
+                <li role="none"><a role="menuitem" href="#">Contacts</a></li>
+            </ul>
+        <button role="button">Invest</button>
+        </nav>
+    </header>
+    <!--Use the HTML5 <main> element to identify the main content region of a web page or application.-->
+    <main>
+        <h5>LEADING AI SOLUTIONS</h5>
+        <H1>Future of investing</H1>
+        <button role="button">Learn more</button>
+        <h1>Enhancing performance</h1>
+        <button role="button">Get started</button>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor neque aenean quis. Amet diam fames posuere vestibulum purus. Sem vitae elit libero, morbi sodales. In consequat aenean at vitae. Blandit faucibus eget in lobortis sagittis blandit leo sit. Sapien.</h3>
+        <h1>Request a consultation</h1>
+    </main>
+    <!--Using the <form> element will automatically communicate a section of content as a form landmark, 
+        if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.-->
+    <form action="/action_page.php" aria-label="Request a consultation">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Smith">
+        <label for="Email address">Email address:</label>
+        <input type="text" id="email" name="email" placeholder="example@examp|">
+        <label for="Phone number">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+        <label for="Subject">Subject</label>
+        <input type="text" id="subject" name="subject">
+        <label for="Subject">Message</label>
+        <input type="text" id="message" name="message">
+        <button role="button">Submit Request</button>
+      </form>
+      <!--The HTML5 <nav> element can be used to identify a navigation menu. -->
+      <nav aria-label="Secondary Navigation">
+        <div class="contentInfoLeft" role="menuItem" aria-label="Secondary Navigation">
+            <ul role="menuItem" aria-label="Secondary Navigation" class="left-menu-items">
+                <li class="title">Products</li>
+                <li role="none"><a role="menuitem" href="#">Technology</a></li>
+                <li role="none"><a role="menuitem" href="#">Research</a></li>
+                <li role="none"><a role="menuitem" href="#">Investment management</a></li>
+            </ul>
+
+            <ul role="menuItem" aria-label="Secondary Navigation" class="middle-menu-items">
+                <li class="title">Information</li>
+                <li role="none"><a role="menuitem" href="#">FAQ</a></li>
+                <li role="none"><a role="menuitem" href="#">Blog</a></li>
+                <li role="none"><a role="menuitem" href="#">Support</a></li>
+            </ul>
+            
+            <ul role="menuItem" aria-label="Secondary Navigation" class="right-menu-items">
+                <li class="title">Company</li>
+                <li role="none"><a role="menuitem" href="#">About us</a></li>
+                <li role="none"><a role="menuitem" href="#">Careers</a></li>
+                <li role="none"><a role="menuitem" href="#">Contact us</a></li>
+            </ul>    
+        </div>
+    </nav>
+    <!--Using the <form> element will automatically communicate a section of content as a form landmark, 
+        if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.-->
+      <form action="/action_page.php" aria-label="Subscribe">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <button role="button">&rarr;</button>
+        <p>Subscribe to our newsletter and get daily insights on what makes the markets move</p>
+      </form>
+
+    <!--Similar to the page header, most websites also have a region at the bottom of every page 
+        that contains site-wide information, such as copyright information, privacy statements, or disclaimers. -->
+    <footer>
+        <img src="#" alt="ICEAI Capital Logo">
+        <ul role="menuItem" aria-label="Footer Navigation" class="footer-menu-items">
+            <li role="none"><a role="menuitem" href="#">Terms</a></li>
+            <li role="none"><a role="menuitem" href="#">Privacy</a></li>
+            <li role="none"><a role="menuitem" href="#">Cookies</a></li>
+        </ul>
+        <div class="social-media-icons" role="social-media-item" aria-label="Social-media-icons">
+        <a href="#" target="_blank" class="fa fa-linkedin"></a>
+        <a href="#" target="_blank" class="fa fa-facebook"></a>
+        <a href="#" target="_blank" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
